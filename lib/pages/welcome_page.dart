@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/widgets/app__text.dart';
 import 'package:travel_app/widgets/app_large_text.dart';
+
+import '../misc/colors.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -20,15 +23,14 @@ class _WelcomePageState extends State<WelcomePage> {
       body: PageView.builder(
           scrollDirection: Axis.vertical,
           itemCount: images.length,
-          itemBuilder: (_, index){
+          itemBuilder: (_, index) {
             return Container(
               width: double.maxFinite,
               height: double.maxFinite,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(
-                    "img/${images[index]}"
-                  ),
+                  image: AssetImage("img/${images[index]}"),
+                fit: BoxFit.cover
                 ),
               ),
               child: Container(
@@ -36,15 +38,28 @@ class _WelcomePageState extends State<WelcomePage> {
                 child: Row(
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        AppLargeText(text: 'Trips')
+                        AppLargeText(text: 'Trips'),
+                        AppText(
+                          text: "Mountain",
+                          size: 30,
+                        ),
+                        Container(
+                          width: 250,
+                          child: AppText(
+                            text:
+                                "Mountain hikes give you an incredible sense of freedom along with endurance tests",
+                            color: AppColors.textColor2,
+                          ),
+                        ),
                       ],
                     ),
                   ],
                 ),
               ),
             );
-      }),
+          }),
     );
   }
 }
