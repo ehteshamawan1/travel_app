@@ -45,12 +45,16 @@ class _WelcomePageState extends State<WelcomePage> {
                           text: "Mountain",
                           size: 30,
                         ),
+                        const SizedBox(
+                          height: 20,
+                        ),
                         SizedBox(
                           width: 250,
                           child: AppText(
                             text:
                                 "Mountain hikes give you an incredible sense of freedom along with endurance tests",
                             color: AppColors.textColor2,
+                            size: 14,
                           ),
                         ),
                       ],
