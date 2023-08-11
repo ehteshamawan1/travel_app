@@ -49,7 +49,15 @@ class _HomePageState extends State<HomePage> {
             height: 30,
           ),
           // Tab Bar
-
+          Container(
+            child: const TabBar(
+              tabs: [
+                Tab(text: "Places",),
+                Tab(text: "Inspiration",),
+                Tab(text: "Emotions",),
+              ],
+            ),
+          ),
         ],
       ),
     );
