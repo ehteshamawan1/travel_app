@@ -14,9 +14,9 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
   List images = [
-    "welcome-one.png",
-    "welcome-two.png",
-    "welcome-three.png",
+    "welcome-one.jpg",
+    "welcome-two.jpg",
+    "welcome-three.jpg",
   ];
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class _WelcomePageState extends State<WelcomePage> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("img/${images[index]}"),
-                fit: BoxFit.cover
+                  fit: BoxFit.cover,
                 ),
               ),
               child: Container(
@@ -44,7 +44,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       children: [
                         AppLargeText(text: 'Trips'),
                         AppText(
-                          text: "Mountain",
+                          text: "Mountain Climbing",
                           size: 30,
                         ),
                         const SizedBox(
@@ -55,8 +55,8 @@ class _WelcomePageState extends State<WelcomePage> {
                           child: AppText(
                             text:
                                 "Mountain hikes give you an incredible sense of freedom along with endurance tests",
-                            color: AppColors.textColor2,
-                            size: 14,
+                            color: AppColors.mountainBlue,
+                            size: 18,
                           ),
                         ),
                         const SizedBox(
@@ -73,7 +73,7 @@ class _WelcomePageState extends State<WelcomePage> {
                           height: index==indexDots?25:8,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: index==indexDots?AppColors.mainColor:AppColors.mainColor.withOpacity(0.3),
+                            color: index==indexDots?AppColors.mountainBlue:AppColors.mountainBlue.withOpacity(0.3),
                           ),
                         );
                       }),
