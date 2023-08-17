@@ -32,6 +32,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 image: DecorationImage(
                   image: AssetImage("img/${images[index]}"),
                   fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.40), BlendMode.darken),
                 ),
               ),
               child: Container(
@@ -55,7 +56,7 @@ class _WelcomePageState extends State<WelcomePage> {
                           child: AppText(
                             text:
                                 "Mountain hikes give you an incredible sense of freedom along with endurance tests",
-                            color: AppColors.mountainBlue,
+                            color: Colors.white,
                             size: 18,
                           ),
                         ),
